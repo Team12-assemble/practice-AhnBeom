@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<meta />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Basics</title>
+    <style>
+      div {
+        border: 1px solid black;
+      }
+      p {
+        font-weight: 600;
+      }
+      #forName {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      1. HTML 제목은 &lt;h1&gt; ~ &lt;h6&gt; 태그로 정의됩니다. &lt;h1&gt;은
+      가장 중요한 제목을 &lt;h6&gt;은 가장 중요하지 않은 제목을 정의합니다.
+    </p>
+    <br />
+    <div>
+      <h1>This is heading 1</h1>
+      <h2>This is heading 2</h2>
+      <h3>This is heading 3</h3>
+    </div>
+    <p>2. 단락은 &lt;p&gt;태그로 정의됩니다.</p>
+    <div>
+      <p>This is a paragraph</p>
+      <p>This is another paragraph</p>
+    </div>
+    <p>3. 링크는 &lt;a&gt;태그로 정의됩니다.</p>
+    <div>
+      <a href="http://naver.com">This is naver link</a>
+    </div>
+    <p>
+      4. 이미지는 &lt;img&gt;태그로 정의됩니다. 소스 파일(src), 대체
+      텍스트(alt), 너비 및 높이가 속성으로 제공됩니다.
+    </p>
+    <div>
+      <img
+        src="https://unsplash.com/ko/%EC%82%AC%EC%A7%84/5UvvHx8yhE0"
+        width="100px"
+        height="100px"
+        alt="고양이"
+      />
+    </div>
+    <h2>장바구니 목록</h2>
+    <ul>
+      <li>사과</li>
+      <li>바나나</li>
+      <li>딸기</li>
+    </ul>
+    <table>
+      <thead>
+        <tr>
+          <th>과일</th>
+          <th>수량</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>딸기</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>바나나</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>사과</td>
+          <td>10</td>
+        </tr>
+      </tbody>
+    </table>
+    <form>
+      <label for="forName">이름:</label>
+      <input type="text" id="forName" /> <br />
+      <label for="forName">이메일:</label>
+      <input type="email" id="forName" required /> <br />
+      <label for="forName">비밀번호:</label>
+      <input type="password" id="forName" required /> <br />
+      <button type="submit">가입하기</button>
+    </form>
+  </body>
+</html>

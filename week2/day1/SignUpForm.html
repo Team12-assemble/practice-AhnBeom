@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>로그인 폼</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      button {
+        width: 10%;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="get" action="./SearchRoom.html">
+      <section>
+        <!-- 이름 -->
+        <label for="forName">이름:</label>
+        <input type="text" id="forName" />
+      </section>
+
+      <!-- 이메일 -->
+      <section>
+        <label for="forEmail">이메일:</label>
+        <input type="email" id="forEmail" />
+      </section>
+
+      <!-- 비밀번호 -->
+      <section>
+        <label for="forPW">비밀번호:</label>
+        <input type="password" id="forPW" />
+      </section>
+
+      <!-- 전화번호 -->
+      <section>
+        <label for="forPhone">전화번호:</label>
+        <input type="number" id="forPhone" />
+      </section>
+
+      <!-- 성별 -->
+      <section>
+        <label for="forWomen">여자</label>
+        <input type="checkbox" id="forWomen" />
+        <label for="forMen">남자</label>
+        <input type="checkbox" id="forMen" />
+      </section>
+
+      <!-- 주소 -->
+      <section>
+        <label for="forAddress">주소</label>
+        <input type="text" id="forAddress" />
+        <label for="forAddressDetail">상세주소</label>
+        <input type="text" id="forAddressDetail" />
+      </section>
+
+      <!-- 버튼 -->
+      <input type="submit" id="submit" value="가입하기"></input>
+    </form>
+  </body>
+</html>
