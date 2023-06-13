@@ -219,3 +219,13 @@ dd {
   background-color: #f2f3f4;
   padding: 1rem;
 }
+
+/* 반응형 1024px부터 */
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 480px) {
+}
