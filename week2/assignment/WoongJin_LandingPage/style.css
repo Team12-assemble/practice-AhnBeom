@@ -1,4 +1,9 @@
+html {
+  width: auto;
+}
+
 body {
+  width: 1920px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,31 +20,80 @@ h6 {
 
 button {
   padding: 0;
+  cursor: pointer;
 }
 
 nav {
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  padding: 0.9rem 0;
 }
 
 .logo {
+  cursor: pointer;
+  width: 10em;
   display: flex;
-  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  width: 20%;
+  color: #0e7159;
+  font-size: 1.2rem;
+}
+
+.logoTitle {
+  margin-top: 0.4rem;
 }
 
 .navBtns {
-  width: 30%;
+  width: 20%;
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 10%;
+  font-size: 0.75rem;
+  font-weight: 700;
 }
 
 .askBtn {
   padding: 0.5rem;
   text-decoration: none;
   color: black;
+}
+
+.startBtn {
+  border: none;
+  border-radius: 7px;
+  color: white;
+  background-color: #0e7159;
+  padding: 0.5rem 1.5rem;
+}
+
+.banner {
+  color: white;
+}
+
+.bannerImg {
+  position: absolute;
+  color: white;
+}
+
+.bannerTitles {
+  position: relative;
+  width: 50%;
+  height: 11rem;
+  justify-content: space-between;
+  display: flex;
+  left: 25%;
+  top: 20rem;
+  text-align: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.bannerMainText {
+  font-size: 3rem;
+  margin: 0;
 }
