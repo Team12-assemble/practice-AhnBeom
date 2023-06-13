@@ -131,11 +131,15 @@ dd {
 
 .mainSection {
   margin: 5em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .groupTitle {
   font-size: 3rem;
   padding: 1rem 0;
+  margin: 3rem 0;
 }
 
 .highlightTitle {
@@ -147,29 +151,39 @@ dd {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 5%;
+  gap: 4rem;
   text-align: start;
 }
 
 .groupList01 {
   display: flex;
   flex-direction: column;
-  width: 18%;
+  width: 10%;
   gap: 1rem;
 }
 
 .groupList02 {
+  width: 20.625rem;
   display: flex;
   flex-direction: column;
-  width: 18%;
+  column-count: 2;
   gap: 1rem;
 }
 
 .mainGroup.wrap {
-  flex-wrap: wrap;
+  width: 1200px;
+  /* width: fit-content; */
+  display: inline-flex;
+  flex-flow: row wrap;
+  align-content: stretch;
   justify-content: left;
-  padding-left: 19%;
-  gap: 10%;
+  overflow-wrap: break-word;
+  row-gap: 14px;
+  padding-left: 8rem;
+}
+
+.subDescription {
+  line-height: 19px;
 }
 
 .goDetail {
@@ -182,8 +196,9 @@ dd {
 .mainSection.second {
   display: flex;
   flex-direction: row;
+  align-items: initial;
   justify-content: center;
-  gap: 25%;
+  gap: 15%;
 }
 
 .device {
@@ -198,4 +213,9 @@ dd {
 
 .nextPhone {
   text-align: left;
+}
+
+.groupList01.plan {
+  background-color: #f2f3f4;
+  padding: 1rem;
 }
