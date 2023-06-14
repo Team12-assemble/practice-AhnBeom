@@ -49,7 +49,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px;
   border-radius: 5%;
 }
 
@@ -58,7 +57,7 @@ main section {
 }
 
 .profileImg {
-  width: fit-content;
+  aspect-ratio: 9/16;
   background: url(my_picture.JPG) no-repeat center;
   background-size: cover;
 }
@@ -85,5 +84,6 @@ a:hover {
   color: pink;
 }
 footer {
+  border-top: 1px solid #96aed0;
   margin-top: 10px;
 }
