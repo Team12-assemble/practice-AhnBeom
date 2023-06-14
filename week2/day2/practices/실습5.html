@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>원 주위 사각형 돌기</title>
+    <style>
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .circle {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: red;
+        animation: spin 2s linear infinite;
+      }
+
+      .square {
+        position: absolute;
+        left: 100px;
+        height: 30px;
+        width: 30px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="circle">
+        <div class="square"></div>
+      </div>
+    </div>
+  </body>
+</html>
