@@ -49,28 +49,125 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 5%;
+  grid-template-areas:
+    "profileImg"
+    "profileContent";
 }
 
 main section {
   height: 100%;
 }
 
-.profileImg {
-  aspect-ratio: 9/16;
-  background: url(my_picture.JPG) no-repeat center;
-  background-size: cover;
+img {
+  grid-area: mainImg;
+  width: 100%;
+  object-fit: cover;
 }
 
-ul {
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-  padding-inline-start: 0;
+.profileContent {
+  display: grid;
+  grid-template-columns: minmax(20%, auto);
+  grid-template-rows: 1.8fr 0.4fr 0.4fr 1.6fr 0.4fr 1.7fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "upper"
+    "state"
+    "title01"
+    "content01"
+    "title02"
+    "content02";
 }
-li {
-  list-style-type: none;
+
+.upper {
+  display: grid;
+  grid-template-columns: 0.6fr 1.4fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "image upperside";
+  grid-area: upper;
 }
+
+.upperside {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "myInfo"
+    "contact";
+  grid-area: upperside;
+}
+
+.myInfo {
+  display: grid;
+  grid-template-columns: 0.7fr 1.6fr 0.7fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "left center right";
+  grid-area: myInfo;
+}
+
+.left {
+  grid-area: left;
+}
+
+.center {
+  grid-area: center;
+}
+
+.right {
+  grid-area: right;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "contact01"
+    "contact02";
+  grid-area: contact;
+}
+
+.contact01 {
+  grid-area: contact01;
+}
+
+.contact02 {
+  grid-area: contact02;
+}
+
+.image {
+  grid-area: image;
+}
+
+.state {
+  grid-area: state;
+}
+
+.title01 {
+  grid-area: title01;
+}
+
+.title02 {
+  grid-area: title02;
+}
+
+.content01 {
+  grid-area: content01;
+}
+
+.content02 {
+  grid-area: content02;
+}
+
 a {
   padding: 0.25rem 0.5rem;
   border-radius: 5%;
