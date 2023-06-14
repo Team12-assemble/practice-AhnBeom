@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스나이퍼팩토리 홈페이지 메뉴 만들기</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      header {
+        padding: 1.5rem 1rem;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        border: 1px solid gray;
+      }
+
+      img {
+        width: 5vw;
+      }
+
+      ol {
+        width: fit-content;
+        padding-left: 0;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(6, minmax(30%, auto));
+        text-align: center;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="./sfac.svg" alt="스나이퍼팩토리 로고" />
+      <nav>
+        <ol>
+          <li>스팩소개</li>
+          <li>교육과정</li>
+          <li>공지사항</li>
+          <li>수료생 커뮤니티</li>
+          <li>협력사</li>
+          <li>스팩블로그</li>
+        </ol>
+      </nav>
+    </header>
+  </body>
+</html>
