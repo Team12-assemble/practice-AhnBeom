@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  gap: 15px;
+}
+
+.item {
+  width: 202px;
+  border: 1px solid black;
+  aspect-ratio: 1/1;
+}
