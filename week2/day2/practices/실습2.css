@@ -1,24 +1,66 @@
+@font-face {
+  font-family: "Arita-dotum-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LeferiPoint-SpecialItalicA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-SpecialItalicA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+header h1 {
+  font-family: "LeferiPoint-SpecialItalicA";
+}
+
 * {
+  font-family: "Arita-dotum-Medium";
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body {
-  margin: 10px;
-  padding: 5%;
-  box-sizing: border-box;
-  border: 1px solid pink;
-  border-radius: 5%;
+.fa-solid.fa-arrow-left,
+.fa-solid.fa-paper-plane {
+  font-size: 2rem;
+}
+
+header {
+  position: static;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #96aed0;
+  padding: 1rem 0;
+  z-index: 2;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 main {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 10px;
+  border-radius: 5%;
+}
+
+main section {
+  height: 100%;
+}
+
+.profileImg {
+  width: fit-content;
+  background: url(my_picture.JPG) no-repeat center;
+  background-size: cover;
 }
 
 ul {
