@@ -96,9 +96,8 @@ dd {
   display: flex;
   justify-content: center;
   color: white;
-  background: url(./images/architecture-2256489_1920.png);
-  object-fit: cover;
-  background-repeat: no-repeat center;
+  background: url(./images/architecture-2256489_1920.png) no-repeat center;
+  background-size: cover;
   aspect-ratio: auto;
 }
 
