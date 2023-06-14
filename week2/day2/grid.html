@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>그리드 실습</title>
+    <style>
+      .container {
+        width: fit-content;
+        height: fit-content;
+        background-color: yellow;
+        display: grid;
+        grid-template-columns: 100px 300px 600px;
+        grid-template-rows: 100px 300px 600px;
+      }
+      .item {
+        background-color: green;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">100px</div>
+      <div class="item">300px</div>
+      <div class="item">600px</div>
+      <div class="item">100px</div>
+      <div class="item">300px</div>
+      <div class="item">600px</div>
+    </div>
+  </body>
+</html>

@@ -8,8 +8,9 @@ span {
   cursor: pointer;
   width: 100px;
   aspect-ratio: 1/1;
-  display: block flex;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -22,5 +23,6 @@ span {
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
