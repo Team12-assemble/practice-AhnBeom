@@ -1,0 +1,33 @@
+body {
+  margin: 10px;
+  padding: 5%;
+  box-sizing: border-box;
+  border: 1px solid pink;
+  border-radius: 5%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding-inline-start: 0;
+}
+li {
+  list-style-type: none;
+}
+a {
+  padding: 0.25rem 0.5rem;
+  border-radius: 5%;
+  text-decoration: none;
+  color: white;
+  background-color: pink;
+  font-size: smaller;
+}
+
+a:hover {
+  color: pink;
+}
+footer {
+  margin-top: 10px;
+}
