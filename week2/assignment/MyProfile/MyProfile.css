@@ -1,0 +1,278 @@
+@font-face {
+  font-family: "Arita-dotum-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LeferiPoint-SpecialItalicA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-SpecialItalicA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+header h1 {
+  font-family: "LeferiPoint-SpecialItalicA";
+}
+
+* {
+  font-family: "Arita-dotum-Medium";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.fa-solid.fa-arrow-left,
+.fa-solid.fa-paper-plane {
+  font-size: 2rem;
+}
+
+header {
+  position: static;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #96aed0;
+  padding: 1rem 1rem;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-template-areas:
+    "profileImg"
+    "profileContent";
+}
+
+main section {
+  height: 100%;
+}
+
+.image {
+  grid-area: mainImg;
+  width: 100%;
+  object-fit: cover;
+  padding: 0.7rem 1rem;
+}
+
+.image.side {
+  padding: 0;
+  height: 100%;
+}
+
+.profileContent {
+  height: 100%;
+  border-left: 1px solid #96aed0;
+  display: grid;
+  grid-template-columns: minmax(20%, auto);
+  grid-template-rows: 1.8fr 0.4fr 0.3fr 1.6fr 0.3fr 1.7fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "upper"
+    "state"
+    "title01"
+    "content01"
+    "title02"
+    "content02";
+}
+
+.upper {
+  display: grid;
+  grid-template-columns: 0.6fr 1.4fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "image upperside";
+  grid-area: upper;
+}
+
+.upperside {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "myInfo"
+    "contact";
+  grid-area: upperside;
+  padding: 2rem 1rem;
+}
+
+.myInfo {
+  display: grid;
+  grid-template-columns: 0.7fr 1.6fr 0.7fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "left center right";
+  grid-area: myInfo;
+  align-items: center;
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.left p:first-child,
+.center p:first-child,
+.right p:first-child {
+  font-size: 1.5rem;
+  font-weight: 900;
+  word-break: keep-all;
+}
+
+.left {
+  grid-area: left;
+}
+
+.center {
+  grid-area: center;
+}
+
+.right {
+  grid-area: right;
+}
+
+.contact {
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "contact01"
+    "contact02";
+  grid-area: contact;
+}
+
+.contact01,
+.contact02 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.contact01 {
+  grid-area: contact01;
+}
+
+.contact01 span,
+.contact02 span {
+  width: 200px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.3rem 0;
+}
+
+.contact01 span,
+.contact02 span,
+.fa-solid.fa-mobile-screen-button,
+.fa-solid.fa-envelope {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.fa-solid.fa-mobile-screen-button,
+.fa-solid.fa-envelope {
+  height: 30px;
+  width: 30px;
+}
+
+.contact02 {
+  grid-area: contact02;
+}
+
+.image {
+  grid-area: image;
+}
+
+.state {
+  grid-area: state;
+  padding: 1.2rem 0;
+  padding-left: 2rem;
+}
+
+.title01 {
+  grid-area: title01;
+}
+
+.title02 {
+  grid-area: title02;
+}
+
+.title01,
+.title02 {
+  background-color: #96aed0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.content01 {
+  grid-area: content01;
+  display: flex;
+}
+
+table {
+  padding: 1rem 1.2rem;
+}
+
+tr {
+  padding: 1rem;
+}
+
+.content02 {
+  grid-area: content02;
+}
+
+.graph {
+  width: 50%;
+  background-color: #abc4e7;
+}
+
+a {
+  padding: 0.25rem 0.5rem;
+  border-radius: 5%;
+  text-decoration: none;
+  color: white;
+  background-color: pink;
+  font-size: smaller;
+}
+
+a:hover {
+  background-color: white;
+  color: pink;
+}
+footer {
+  border-top: 1px solid #96aed0;
+}
