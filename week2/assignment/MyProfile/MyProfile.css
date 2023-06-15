@@ -54,8 +54,28 @@ main {
     "profileContent";
 }
 
-main section {
+.profileImg,
+.profileContent {
   height: 100%;
+}
+
+.profileImg {
+  grid-area: profileImg;
+  display: grid;
+  grid-template-rows: 0.6fr 0.4fr;
+  grid-template-areas:
+    "image"
+    "imgBottom";
+}
+
+.imgBottom {
+  grid-area: imgBottom;
+  display: grid;
+  grid-template-rows: 0.6fr 1fr;
+  grid-template-areas:
+    "icons"
+    "message";
+  padding: 1rem 1.2rem;
 }
 
 .image {
@@ -65,8 +85,40 @@ main section {
   padding: 0.7rem 1rem;
 }
 
+.icons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 2rem;
+}
+
+.iconsGroup {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.fa-solid.fa-heart {
+  color: rgb(238, 72, 72);
+}
+
+.message {
+  margin-top: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.message article {
+  text-align: right;
+  margin-top: 1.3rem;
+}
+
 .image.side {
   padding: 0;
+  aspect-ratio: 1/1;
   height: 100%;
 }
 
@@ -75,7 +127,7 @@ main section {
   border-left: 1px solid #96aed0;
   display: grid;
   grid-template-columns: minmax(20%, auto);
-  grid-template-rows: 1.8fr 0.4fr 0.3fr 1.6fr 0.3fr 1.7fr;
+  grid-template-rows: 1.2fr 0.3fr 0.2fr 1.4fr 0.2fr 1.2fr;
   grid-auto-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -90,8 +142,8 @@ main section {
 
 .upper {
   display: grid;
-  grid-template-columns: 0.6fr 1.4fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 0.9fr 1.5fr;
+  grid-template-rows: max-content;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas: "image upperside";
@@ -101,14 +153,14 @@ main section {
 .upperside {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0.5fr 0.7fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "myInfo"
     "contact";
   grid-area: upperside;
-  padding: 2rem 1rem;
+  padding: 1.5rem 0.8rem;
 }
 
 .myInfo {
@@ -157,7 +209,7 @@ main section {
   margin-top: 0.5rem;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 40% 40%;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -214,6 +266,8 @@ main section {
 }
 
 .state {
+  display: flex;
+  align-items: center;
   grid-area: state;
   padding: 1.2rem 0;
   padding-left: 2rem;
@@ -244,20 +298,96 @@ main section {
 }
 
 table {
+  display: flex;
+  gap: 1rem;
   padding: 1rem 1.2rem;
 }
 
+tbody {
+  display: flex;
+  flex-direction: column;
+}
+
 tr {
-  padding: 1rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+th {
+  width: 9rem;
+  font-size: larger;
+  font-weight: 900;
+  text-align: left;
+}
+
+td {
+  width: 70%;
 }
 
 .content02 {
   grid-area: content02;
 }
 
+.graphTable {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.2rem;
+  gap: 10px;
+}
+
+.graphLine {
+  width: 80%;
+  gap: 10px;
+}
+
+.graphName {
+  width: 20%;
+  font-size: 1.2rem;
+  font-weight: 800;
+  gap: 15px;
+  padding: 0 1rem;
+}
+
+.graphLine,
+.graphName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .graph {
-  width: 50%;
+  width: 480px;
+  height: 30px;
   background-color: #abc4e7;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  color: white;
+  padding-right: 0.5rem;
+}
+
+.js {
+  width: 90%;
+  content: "80%";
+}
+
+.emotion {
+  width: 70%;
+}
+
+.react {
+  width: 60%;
+}
+
+.ts {
+  width: 50%;
+}
+
+.next {
+  width: 30%;
 }
 
 a {
@@ -265,14 +395,11 @@ a {
   border-radius: 5%;
   text-decoration: none;
   color: white;
-  background-color: pink;
+  background-color: #abc4e7;
   font-size: smaller;
 }
 
 a:hover {
   background-color: white;
-  color: pink;
-}
-footer {
-  border-top: 1px solid #96aed0;
+  color: #abc4e7;
 }
