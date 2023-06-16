@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 슬라이더</title>
+    <style>
+      img {
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="album">
+      <section class="buttons">
+        <button class="prev">이전</button>
+        <button class="next">다음</button>
+      </section>
+      <img src="./images/3.jpg" class="show" />
+      <img src="./images/1.jpg" />
+      <img src="./images/4.jpeg" />
+      <img src="./images/6.jpg" />
+      <img src="./images/5.jpeg" />
+      <img src="./images/2.jpg" />
+    </section>
+  </body>
+  <script>
+    let slides = document.querySelectorAll(".album > img");
+    let next = document.querySelector(".next");
+    let prev = document.querySelector(".prev");
+    let current = 0;
+
+    showSlide(current);
+
+    function showSlide(n) {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[n].style.display = "block";
+    }
+
+    // function nextButton() {
+    //   current += 1;
+    //   console.log(current);
+    //   document
+    //     .querySelector("div")
+    //     .children[current - 1].classList.remove("show");
+    //   document.querySelector("div").children[current].classList.add("show");
+    //   if (current === 5) {
+    //     next.disabled = true;
+    //   } else if (current < 5) {
+    //     next.disabled = false;
+    //   }
+    // }
+
+    // function prevButton() {
+    //   current -= 1;
+    //   console.log(current);
+    //   document
+    //     .querySelector("div")
+    //     .children[current + 1].classList.remove("show");
+    //   document.querySelector("div").children[current].classList.add("show");
+    //   if (current === 0) {
+    //     prev.disabled = true;
+    //   } else {
+    //     prev.disabled = false;
+    //   }
+    // }
+
+    function preSlide() {
+      if (current > 0) current -= 1;
+      else current = slides.length - 1;
+      showSlide(current);
+    }
+
+    function nextSlide() {
+      if (current < slides.length - 1) current += 1;
+      else current = 0;
+      showSlide(current);
+    }
+
+    prev.onclick = preSlide;
+    next.onclick = nextSlide;
+  </script>
+</html>
