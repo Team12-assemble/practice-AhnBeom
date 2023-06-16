@@ -40,34 +40,6 @@
       slides[n].style.display = "block";
     }
 
-    // function nextButton() {
-    //   current += 1;
-    //   console.log(current);
-    //   document
-    //     .querySelector("div")
-    //     .children[current - 1].classList.remove("show");
-    //   document.querySelector("div").children[current].classList.add("show");
-    //   if (current === 5) {
-    //     next.disabled = true;
-    //   } else if (current < 5) {
-    //     next.disabled = false;
-    //   }
-    // }
-
-    // function prevButton() {
-    //   current -= 1;
-    //   console.log(current);
-    //   document
-    //     .querySelector("div")
-    //     .children[current + 1].classList.remove("show");
-    //   document.querySelector("div").children[current].classList.add("show");
-    //   if (current === 0) {
-    //     prev.disabled = true;
-    //   } else {
-    //     prev.disabled = false;
-    //   }
-    // }
-
     function preSlide() {
       if (current > 0) current -= 1;
       else current = slides.length - 1;
