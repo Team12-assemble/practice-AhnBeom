@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시계</title>
+    <style>
+      div {
+        display: flex;
+        justify-content: center;
+      }
+      p {
+        display: block;
+        margin-top: 10px;
+        border: 3px solid pink;
+        border-radius: 8px;
+        color: pink;
+        font-size: 2rem;
+        padding: 0.8rem 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>00:00:00</p>
+    </div>
+  </body>
+  <script>
+    function clock() {
+      let date = new Date();
+      let hours = String(date.getHours()).padStart(2, "0");
+      let minutes = String(date.getMinutes()).padStart(2, "0");
+      let seconds = String(date.getSeconds()).padStart(2, "0");
+      document.querySelector("p").innerText = `${hours}:${minutes}:${seconds}`;
+    }
+
+    clock();
+    setInterval(clock, 1000);
+  </script>
+</html>
