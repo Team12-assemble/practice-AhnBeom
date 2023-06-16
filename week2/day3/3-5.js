@@ -25,3 +25,13 @@ let text10 = "Please locate where 'locate' occurs!";
 let index = text10.lastIndexOf("John"); // -1
 let index2 = text10.indexOf("locate", 15); // 21
 console.log(index, index2);
+
+// 템플릿 리터럴
+let text11 = `hello world!`;
+let firstName = "John";
+let lastName = "Doe";
+let text12 = `Welcome ${firstName}, ${lastName}!`;
+console.log(text11, text12);
+
+const fruits = ["banana", "orange", "apple", "mango"];
+document.getElementById("demo").innerHTML = fruits.toString();
