@@ -1,7 +1,20 @@
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "SpoqaHanSansNeo-Regular";
+}
+
+body {
+  margin: 0 auto;
 }
 
 html {
@@ -59,7 +72,6 @@ dd {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #0e7159;
   font-size: 1.2rem;
 }
 
@@ -99,16 +111,17 @@ dd {
   background: url(./images/architecture-2256489_1920.png) no-repeat center;
   background-size: cover;
   aspect-ratio: auto;
+  filter: brightness(0.3);
 }
 
 .bannerTitles {
-  /* width: 50%; */
+  position: relative;
   display: flex;
-  top: 20rem;
   text-align: center;
   justify-content: center;
   flex-direction: column;
   z-index: 10;
+  filter: brightness(1);
 }
 
 .bannerMainText {
@@ -121,7 +134,7 @@ dd {
 .descriptionList {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .mainSection {
@@ -132,7 +145,9 @@ dd {
 }
 
 .groupTitle {
-  font-size: 3rem;
+  font-weight: 500;
+  font-size: 2.7rem;
+  line-height: 38px;
   padding: 1rem 0;
   margin: 3rem 0;
 }
@@ -144,7 +159,6 @@ dd {
 .mainGroup {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   gap: 4rem;
@@ -173,14 +187,27 @@ dd {
   gap: 1rem;
 }
 
-.mainGroup.wrap {
-  width: 1200px;
-  /* width: fit-content; */
+.groupList02 p {
+  font-weight: 500;
+  font-size: 1.313rem;
+}
+
+.groupList02 dt {
+  font-weight: 700;
+  font-size: 1.313rem;
+}
+
+.groupList02 dd {
+  line-height: 19px;
+  letter-spacing: -0.598595px;
+}
+
+.wrap {
+  width: 60%;
   display: inline-flex;
   padding: 2rem 0;
   flex-flow: row wrap;
   align-content: stretch;
-  justify-content: left;
   overflow-wrap: break-word;
   row-gap: 14px;
 }
@@ -200,28 +227,54 @@ dd {
   display: flex;
   flex-direction: row;
   align-items: initial;
-  justify-content: center;
-  gap: 15%;
+  justify-content: space-evenly;
 }
 
-.device {
-  position: absolute;
-}
-
-.mockup {
-  position: relative;
-  top: 14px;
-  left: 19px;
+.noshadow {
+  display: none;
 }
 
 .nextPhone {
+  width: 30%;
   text-align: left;
 }
 
+.nextPhoneTitle {
+  margin-bottom: 20px;
+}
+
+.subTitle {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nextPhone dd {
+  height: 5rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.mainTitle {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
 .groupList01.plan {
+  width: 18%;
   background-color: #f2f3f4;
   padding: 2rem;
   border-radius: 14px;
+}
+
+.planDetail {
+  font-size: 1rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem 0;
 }
 
 .userProfile {
@@ -237,8 +290,6 @@ dd {
 
 .review {
   font-size: 1.125rem;
-  word-break: break-all;
-  color: #6b7684;
 }
 
 .mainFooter {
@@ -256,7 +307,6 @@ dd {
 
 .mainFooter button {
   background-color: white;
-  color: #0e7159;
   border-radius: 8px;
   border: none;
   padding: 1rem;
@@ -276,34 +326,95 @@ footer {
 }
 
 small {
-  color: #6b7684;
   line-height: 1.5rem;
+}
+
+.groupTitle,
+.logo,
+.nextPhoneTitle p:first-child,
+.groupList02 p,
+.mainFooter button,
+.price {
+  color: #0e7159;
+}
+
+.review,
+.groupList01 dd,
+.groupList02 dd,
+label p:nth-child(2),
+.nextPhone dd {
+  word-break: keep-all;
+  color: #6b7684;
+}
+
+.planDetail,
+small {
+  color: #6b7684;
 }
 
 /* 반응형 1024px부터 */
 @media screen and (max-width: 1024px) {
+  .mainGroup {
+    flex-wrap: wrap;
+  }
+
   .mainGroup.wrap {
     width: 100%;
+    padding: 2rem 10%;
+    row-gap: 45px;
+  }
+
+  .slide {
+    flex-wrap: nowrap;
   }
   .descriptionList {
     padding: 0 2rem;
   }
 
   .mainSection.second {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
-    column-gap: 10%;
-    gap: 5rem;
+    gap: 20px;
+    margin: 4em 0;
   }
+
+  .mainSection.second.swap {
+    flex-direction: column;
+  }
+
   .nextPhone {
+    width: 100%;
     text-align: center;
   }
 
-  .mainGroup.plan {
-    justify-content: left;
+  .nextPhone dd {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .groupList01 {
+    width: 30%;
+  }
+
+  .groupList01 dt {
+    font-size: 1.313rem;
+    font-weight: 700;
+  }
+
+  .groupList01 dd {
+    word-break: break-all;
+    line-height: 26px;
   }
 
   .groupList01.plan {
-    width: 30%;
+    width: 33%;
+  }
+
+  .shadow {
+    display: none;
+  }
+
+  .noshadow {
+    display: block;
   }
 }
