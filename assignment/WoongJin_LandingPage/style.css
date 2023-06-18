@@ -111,6 +111,7 @@ dd {
   text-align: center;
   justify-content: center;
   flex-direction: column;
+  gap: 10px;
 }
 
 .banner {
@@ -122,11 +123,10 @@ dd {
     url(./images/architecture-2256489_1920.png) no-repeat center;
   background-size: cover;
   aspect-ratio: auto;
-  gap: 10px;
 }
 
 .bannerMainText {
-  font-size: 3rem;
+  font-size: 3.75rem;
   margin: 0;
 }
 
@@ -388,6 +388,16 @@ button {
 
 /* 반응형 1024px부터 */
 @media screen and (max-width: 1024px) {
+  .banner {
+    height: 30vh;
+  }
+  .bannerMainText {
+    font-size: 3rem;
+  }
+
+  .groupTitle {
+    font-size: 2rem;
+  }
   .enterLink {
     display: none;
   }
@@ -464,6 +474,9 @@ button {
 }
 
 @media screen and (max-width: 768px) {
+  .bannerMainText {
+    font-size: 2.25rem;
+  }
   .groupList01 {
     width: 40%;
   }
@@ -488,6 +501,10 @@ button {
     width: 45%;
   }
 
+  .groupTitle.long {
+    font-size: 2.1rem;
+  }
+
   .groupTitle {
     font-size: 2.25rem;
   }
@@ -503,6 +520,12 @@ button {
 
 /* 468px */
 @media screen and (max-width: 480px) {
+  .banner {
+    height: 16vh;
+  }
+  .bannerMainText {
+    font-size: 1.5rem;
+  }
   .groupTitle {
     font-size: 1.5rem;
     padding: 0;
