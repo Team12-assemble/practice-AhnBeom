@@ -105,25 +105,24 @@ dd {
   padding: 0.5rem 1.5rem;
 }
 
-.banner {
-  height: 60vh;
-  display: flex;
-  justify-content: center;
-  color: white;
-  background: url(./images/architecture-2256489_1920.png) no-repeat center;
-  background-size: cover;
-  aspect-ratio: auto;
-  filter: brightness(0.3);
-}
-
 .bannerTitles {
   position: relative;
   display: flex;
   text-align: center;
   justify-content: center;
   flex-direction: column;
-  z-index: 10;
-  filter: brightness(1);
+}
+
+.banner {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./images/architecture-2256489_1920.png) no-repeat center;
+  background-size: cover;
+  aspect-ratio: auto;
+  gap: 10px;
 }
 
 .bannerMainText {
@@ -172,13 +171,6 @@ dd {
   flex-direction: column;
   width: 15%;
   gap: 1rem;
-}
-
-.groupList01.slideItem {
-  width: 30em;
-  background: #f2f3f4;
-  border-radius: 14px;
-  padding: 3rem;
 }
 
 .groupList02 {
@@ -284,6 +276,7 @@ dd {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  text-align: left;
 }
 
 .userReviewImg {
@@ -292,7 +285,33 @@ dd {
 }
 
 .review {
+  margin-top: 1rem;
+  line-height: 2rem;
   font-size: 1.125rem;
+  text-align: left;
+}
+
+/* 슬라이더 */
+
+.slide {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.slideItem {
+  width: 38em;
+  background: #f2f3f4;
+  border-radius: 14px;
+  padding: 3rem;
 }
 
 .mainFooter {
@@ -338,12 +357,10 @@ small {
 .groupList02 p,
 .mainFooter button,
 .price,
-.goDetail {
+.goDetail,
+.prev,
+.next {
   color: #0e7159;
-}
-
-.review {
-  word-break: keep-all;
 }
 
 .review,
@@ -360,7 +377,6 @@ small {
 }
 
 button {
-  cursor: pointer;
   background-color: #0e7159;
   color: white;
   border: none;
@@ -370,6 +386,16 @@ button {
 
 /* 반응형 1024px부터 */
 @media screen and (max-width: 1024px) {
+  .enterLink {
+    display: none;
+  }
+  .askBtn {
+    display: none;
+  }
+
+  .startBtn {
+    padding: 0.5rem 1rem;
+  }
   .mainGroup {
     flex-wrap: wrap;
   }
@@ -378,10 +404,6 @@ button {
     width: 100%;
     padding: 2rem 10%;
     row-gap: 45px;
-  }
-
-  .slide {
-    flex-wrap: nowrap;
   }
   .descriptionList {
     padding: 0 2rem;
@@ -479,14 +501,6 @@ button {
 
 /* 468px */
 @media screen and (max-width: 480px) {
-  .askBtn {
-    display: none;
-  }
-
-  .startBtn {
-    padding: 0.5rem 1rem;
-  }
-
   .groupTitle {
     font-size: 1.5rem;
     padding: 0;
@@ -508,6 +522,7 @@ button {
   }
 
   .mainGroup.wrap {
+    height: 100%;
     padding: 2rem 13%;
   }
 
@@ -517,8 +532,25 @@ button {
     margin-top: 2rem;
   }
 
-  .mainGroup.slide {
+  .slide {
     margin-top: 2rem;
+  }
+
+  .slideItem {
+    width: 28em;
+  }
+
+  .prev,
+  .next {
+    position: relative;
+  }
+
+  .prev {
+    left: 42px;
+  }
+
+  .next {
+    right: 46px;
   }
 
   .mainSection {
