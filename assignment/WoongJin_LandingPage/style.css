@@ -170,7 +170,7 @@ dd {
 .groupList01 {
   display: flex;
   flex-direction: column;
-  width: 18%;
+  width: 15%;
   gap: 1rem;
 }
 
@@ -221,6 +221,7 @@ dd {
 .goDetail {
   display: block;
   margin-top: 3rem;
+  font-weight: 700;
 }
 
 /* 두번째 메인 설명 표시 */
@@ -265,7 +266,7 @@ dd {
 .groupList01.plan {
   width: 18%;
   background-color: #f2f3f4;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 14px;
 }
 
@@ -336,8 +337,13 @@ small {
 .nextPhoneTitle p:first-child,
 .groupList02 p,
 .mainFooter button,
-.price {
+.price,
+.goDetail {
   color: #0e7159;
+}
+
+.review {
+  word-break: keep-all;
 }
 
 .review,
@@ -345,13 +351,21 @@ small {
 .groupList02 dd,
 label p:nth-child(2),
 .nextPhone dd {
-  word-break: keep-all;
   color: #6b7684;
 }
 
 .planDetail,
 small {
   color: #6b7684;
+}
+
+button {
+  cursor: pointer;
+  background-color: #0e7159;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 1.3rem 0;
 }
 
 /* 반응형 1024px부터 */
@@ -418,5 +432,127 @@ small {
 
   .noshadow {
     display: block;
+  }
+
+  .goDetail.hidden {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .groupList01 {
+    width: 40%;
+  }
+
+  .nextPhone dd {
+    font-size: 1.4rem;
+  }
+
+  .mainGroup.plan {
+    gap: 2rem;
+    justify-content: flex-start;
+  }
+
+  .mainGroup.wrap {
+    height: 490px;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  .groupList01.plan {
+    width: 45%;
+  }
+
+  .groupTitle {
+    font-size: 2.25rem;
+  }
+
+  footer {
+    padding: 2rem 5%;
+  }
+
+  .mainFooter p {
+    font-size: 3rem;
+  }
+}
+
+/* 468px */
+@media screen and (max-width: 480px) {
+  .askBtn {
+    display: none;
+  }
+
+  .startBtn {
+    padding: 0.5rem 1rem;
+  }
+
+  .groupTitle {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .groupTitle.long {
+    font-size: 1.29rem;
+  }
+
+  .safeHomes {
+    display: none;
+  }
+
+  .mainGroup {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .mainGroup.wrap {
+    padding: 2rem 13%;
+  }
+
+  .mainGroup.plan {
+    gap: 30px;
+    padding: 0 3rem;
+    margin-top: 2rem;
+  }
+
+  .mainGroup.slide {
+    margin-top: 2rem;
+  }
+
+  .mainSection {
+    margin: 2em 0;
+  }
+
+  .groupList01 {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .groupList02 {
+    width: 100%;
+  }
+
+  .mainTitle {
+    font-size: 2.25rem;
+  }
+
+  .nextPhone dd {
+    font-size: 1.125rem;
+    line-height: 28px;
+    width: 80%;
+  }
+
+  .groupList01.plan {
+    width: 100%;
+  }
+
+  .goDetail.hidden02 {
+    display: none;
+  }
+
+  .mainFooter p {
+    font-size: 2.25rem;
   }
 }
