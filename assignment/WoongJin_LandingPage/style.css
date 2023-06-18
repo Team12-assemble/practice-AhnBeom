@@ -408,8 +408,13 @@ button {
   .startBtn {
     padding: 0.5rem 1rem;
   }
+
+  .groupCenter {
+    width: calc(100% - 22rem);
+  }
   .mainGroup {
     flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   .mainGroup.wrap {
@@ -442,8 +447,9 @@ button {
     margin: 0 auto;
   }
 
-  .groupList01 {
-    width: 30%;
+  .groupList01,
+  .groupList01.plan {
+    width: 43%;
   }
 
   .groupList01 dt {
@@ -454,10 +460,6 @@ button {
   .groupList01 dd {
     word-break: break-all;
     line-height: 26px;
-  }
-
-  .groupList01.plan {
-    width: 33%;
   }
 
   .shadow {
@@ -477,8 +479,17 @@ button {
   .bannerMainText {
     font-size: 2.25rem;
   }
-  .groupList01 {
-    width: 40%;
+
+  .groupCenter {
+    width: calc(100% - 8rem);
+  }
+
+  .groupCenter.plan {
+    width: calc(100% - 2rem);
+  }
+
+  .groupList01.plan {
+    width: 47%;
   }
 
   .nextPhone dd {
@@ -495,10 +506,6 @@ button {
     flex-direction: column;
     justify-content: flex-start;
     padding: 0;
-  }
-
-  .groupList01.plan {
-    width: 45%;
   }
 
   .groupTitle.long {
@@ -538,6 +545,10 @@ button {
 
   .safeHomes {
     display: none;
+  }
+
+  .groupCenter {
+    width: 100%;
   }
 
   .mainGroup {
