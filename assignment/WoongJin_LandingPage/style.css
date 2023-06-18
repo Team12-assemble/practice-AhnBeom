@@ -199,11 +199,13 @@ dd {
 .wrap {
   width: 60%;
   display: inline-flex;
-  padding: 2rem 0;
   flex-flow: row wrap;
   align-content: stretch;
+  justify-content: flex-start;
   overflow-wrap: break-word;
   row-gap: 14px;
+  padding: 2rem 0;
+  margin: 0 auto;
 }
 
 .subDescription {
