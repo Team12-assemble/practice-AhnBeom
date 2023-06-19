@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>객체</title>
+  </head>
+  <body>
+    <script>
+      let person = {
+        name: "정동훈",
+        age: 29,
+        height: 180,
+        weight: 60,
+        career: { 첫번째직장: "군대", 두번째직장: "세이프홈즈" },
+      };
+
+      person.belong = "세이프홈즈";
+
+      document.write(`제 이름은 ${person.name}입니다. <br>`);
+      document.write(`제 나이는 ${person.age}입니다. <br>`);
+      document.write(`제 이름은 ${person["name"]}입니다.`);
+    </script>
+  </body>
+</html>

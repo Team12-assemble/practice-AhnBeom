@@ -7,7 +7,8 @@
     <title>Document</title>
   </head>
   <body>
-    <button type="button" onclick="test(event)">클릭</button>
+    <button id="btn" type="button" onclick="test(event)">클릭</button>
+    <input id="hello" type="text" onchange="onchange" />
     <script>
       //   let x = 15;
       //   document.write(`x%3 === 0 || x%5 == 0 : ${x % 3 === 0 || x % 5 == 0}`);
@@ -21,8 +22,21 @@
 
       function test(e) {
         console.log(e.target);
-        document.write("hello world!");
+        //   document.write("hello world!");
       }
+
+      const btn = document.getElementById("btn");
+      const hello = document.getElementById("hello");
+
+      function startBtn() {
+        console.log("it works!");
+      }
+      btn.addEventListener("click", startBtn);
+
+      hello.onchange = function () {
+        let hello2 = hello.value;
+        console.log(hello2);
+      };
     </script>
   </body>
 </html>
