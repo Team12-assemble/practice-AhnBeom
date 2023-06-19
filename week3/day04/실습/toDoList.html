@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>투두리스트</title>
+  </head>
+  <body>
+    <main>
+      <form>
+        <input type="text" required />
+        <button>추가</button>
+      </form>
+      <ul id="todoList"></ul>
+    </main>
+  </body>
+  <script>
+    const submit = document.querySelector("form");
+    const todoList = document.getElementById("todoList");
+
+    function addTodo(event) {
+      event.preventDefault();
+      //버튼에 클릭 이벤트가 발생하면
+      let todo = document.querySelector("input").value;
+      let list = document.createElement("li"); // html 'li' 태그 만들기
+      if (!todo)
+        // 할 일 입력창에 내용이 입력되지 않으면 alert 발생
+        alert("내용을 입력해 주세요!");
+      else {
+        todoList.appendChild(list); // <li>입력된 할 일</li>
+        list.innerHTML = `<span>${todo}</span>
+        <button>삭제</button>`; // 할 일 리스트창에 자식으로 붙이기
+        todo = ""; // 할 일 입력창 초기화
+      }
+    }
+    submit.addEventListener("submit", addTodo);
+
+    const btn = document.querySelector("button");
+
+    function deleteTodo(event) {
+      console.log(event);
+    }
+
+    btn.addEventListener("click", deleteTodo);
+  </script>
+</html>
