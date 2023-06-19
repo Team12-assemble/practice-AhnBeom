@@ -35,7 +35,10 @@
       padding: 0.5rem 1rem;
     }
     span {
-      font-size: bold;
+      font-weight: 800;
+    }
+    #chatList {
+      padding: 1rem;
     }
   </style>
   <body>
@@ -63,7 +66,10 @@
       const userName = document.getElementById("userName").value;
       const message = document.getElementById("message").value;
 
-      chatList.innerHTML = `<span>${userName}</span>: ${message}`;
+      let chat = document.createElement("div");
+
+      chat.innerHTML = `<span>${userName}</span>: ${message}`;
+      chatList.appendChild(chat);
     }
 
     submit.addEventListener("submit", createChat);
