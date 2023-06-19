@@ -7,9 +7,22 @@
     <title>Document</title>
   </head>
   <body>
+    <button type="button" onclick="test(event)">클릭</button>
     <script>
-      let x = 15;
-      document.write(`x%3 === 0 || x%5 == 0 : ${x % 3 === 0 || x % 5 == 0}`);
+      //   let x = 15;
+      //   document.write(`x%3 === 0 || x%5 == 0 : ${x % 3 === 0 || x % 5 == 0}`);
+
+      function circleWidth(r) {
+        let width = r * r * 3.14;
+        return width;
+      }
+
+      document.write(circleWidth(10));
+
+      function test(e) {
+        console.log(e.target);
+        document.write("hello world!");
+      }
     </script>
   </body>
 </html>
