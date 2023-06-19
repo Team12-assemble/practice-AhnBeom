@@ -23,10 +23,12 @@
     <ul id="cartItemList"></ul>
   </body>
   <script>
+    let cart = new Array();
     const cartItemList = document.getElementById("cartItemList");
     const btns = document.getElementsByTagName("button");
     const btn = [...btns];
-    let cart = [];
+    let item = JSON.parse(localStorage.getItem("cart"));
+
     function cartIn(value) {
       cart.push(value);
       localStorage.setItem("cart", JSON.stringify(cart));
@@ -35,5 +37,13 @@
       cartItemList.appendChild(cartItem);
     }
     btn.forEach((el) => el.addEventListener("click", () => cartIn(el.value)));
+
+    if (item) {
+      item.map((el) => {
+        const cartItem = document.createElement("li");
+        cartItem.textContent = el;
+        cartItemList.appendChild(cartItem);
+      });
+    }
   </script>
 </html>
