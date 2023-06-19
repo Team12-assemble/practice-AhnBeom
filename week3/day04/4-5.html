@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    document.write(`true || true : ${true || true} <br>`);
+    document.write(`true || false : ${true || false} <br>`);
+    document.write(`false || true : ${false || true} <br>`);
+    document.write(`false || false : ${false || false} <br>`);
+
+    // 퀴즈
+    let a = 4;
+    let b = 20;
+    let result1 = 0;
+    let result2 = 0;
+    let result3 = 0;
+
+    // if (a > 3 && a < 5) {
+    //   result1 = a + b;
+    // } else {
+    //   result1 = a * b;
+    // }
+    // 삼항연산자
+    result1 = a > 3 && a < 5 ? a + b : a * b;
+
+    // if (a === 4 || b === 10) {
+    //   result2 = a * b;
+    // }
+    // 비교연산자
+    result2 = (a === 4 || b === 10) && a * b;
+
+    // if (a === 4 && b === 20) {
+    //   result3 = a * b;
+    // }
+    // 비교연산자
+    result3 = a === 4 && b === 20 && a * b;
+
+    document.write(`${result1}, ${result2}, ${result3}`);
+  </script>
+</html>

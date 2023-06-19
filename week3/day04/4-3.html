@@ -10,5 +10,24 @@
   <script>
     let name = prompt("이름을 입력하세요.");
     let age = prompt("나이를 입력해주세요.");
+
+    let x, y, z;
+    x = 5;
+    y = 9;
+    y++;
+    x--;
+    ++y;
+    --x;
+    x = x + 2;
+    x += 2;
+
+    document.write("x ===", x, "<br>");
+    document.write("y ===", y, "<br>");
+
+    document.write(
+      "제 이름은 " + name + ", 제 나이는 " + age + "입니다.",
+      "<br>"
+    );
+    document.write(`제 이름은 ${name}, 제 나이는 ${age}입니다.`);
   </script>
 </html>
