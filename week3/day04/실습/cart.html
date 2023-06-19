@@ -23,11 +23,13 @@
     <ul id="cartItemList"></ul>
   </body>
   <script>
+    let item = JSON.parse(localStorage.getItem("cart"));
+
     let cart = new Array();
+
     const cartItemList = document.getElementById("cartItemList");
     const btns = document.getElementsByTagName("button");
     const btn = [...btns];
-    let item = JSON.parse(localStorage.getItem("cart"));
 
     function cartIn(value) {
       cart.push(value);

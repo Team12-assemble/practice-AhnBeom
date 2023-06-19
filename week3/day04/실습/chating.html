@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>채팅 실습</title>
+  </head>
+  <style>
+    header {
+      width: 100%;
+      height: 30vh;
+      background-color: rgb(42, 170, 155);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+    }
+
+    form {
+      margin-top: 10px;
+    }
+
+    input {
+      width: 200px;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+    }
+
+    button {
+      background-color: rgb(42, 170, 155);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+    }
+    span {
+      font-size: bold;
+    }
+  </style>
+  <body>
+    <header>실시간 채팅</header>
+    <main>
+      <section id="chatList"></section>
+      <form id="chatting">
+        <input required id="userName" placeholder="사용자명" type="text" />
+        <input
+          required
+          id="message"
+          placeholder="메시지를 입력하세요"
+          type="text"
+        />
+        <button>전송</button>
+      </form>
+    </main>
+  </body>
+  <script>
+    const chatList = document.getElementById("chatList");
+    const submit = document.getElementById("chatting");
+
+    function createChat(event) {
+      event.preventDefault();
+      const userName = document.getElementById("userName").value;
+      const message = document.getElementById("message").value;
+
+      chatList.innerHTML = `<span>${userName}</span>: ${message}`;
+    }
+
+    submit.addEventListener("submit", createChat);
+  </script>
+</html>
