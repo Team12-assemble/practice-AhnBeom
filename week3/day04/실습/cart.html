@@ -6,5 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>장바구니 카트</title>
   </head>
-  <body></body>
+  <body>
+    <ul>
+      <li>
+        버터오징어구이 2000원
+        <button value="버터오징어구이">담기</button>
+      </li>
+      <li>포카리스웨트 1000원 <button value="포카리스웨트">담기</button></li>
+      <li>포카칩 1100원 <button value="포카칩">담기</button></li>
+      <li>노랑통닭 19000원 <button value="노랑통닭">담기</button></li>
+      <li>
+        자바칩프라푸치노 7000원 <button value="자바칩프라푸치노">담기</button>
+      </li>
+    </ul>
+
+    <ul id="cartItemList"></ul>
+  </body>
+  <script>
+    const cartItemList = document.getElementById("cartItemList");
+    const btns = document.getElementsByTagName("button");
+    const btn = [...btns];
+    let cart = [];
+    function cartIn(value) {
+      cart.push(value);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      const cartItem = document.createElement("li");
+      cartItem.textContent = `${value}`;
+      cartItemList.appendChild(cartItem);
+    }
+    btn.forEach((el) => el.addEventListener("click", () => cartIn(el.value)));
+  </script>
 </html>
