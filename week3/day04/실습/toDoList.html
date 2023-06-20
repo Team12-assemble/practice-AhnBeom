@@ -8,40 +8,48 @@
   </head>
   <body>
     <main>
-      <form>
-        <input type="text" required />
+      <form id="todo-form">
+        <input type="text" required placeholder="할 일을 입력하세요." />
         <button>추가</button>
       </form>
       <ul id="todoList"></ul>
     </main>
   </body>
   <script>
-    const submit = document.querySelector("form");
-    const todoList = document.getElementById("todoList");
+    const todoForm = document.querySelector("#todo-form");
+    const todoList = document.querySelector("#todoList");
+    const todoInput = document.querySelector("input");
+
+    function deleteTodo(event) {
+      const li = event.target.parentNode;
+      li.remove();
+    }
+
+    function paintTodo(newTodo) {
+      const list = document.createElement("li"); // html 'li' 태그 만들기
+      const span = document.createElement("span");
+      span.innerText = newTodo;
+      const button = document.createElement("button");
+      button.innerText = "삭제";
+      button.addEventListener("click", deleteTodo);
+      list.append(span, button);
+      todoList.appendChild(list); // <li>입력된 할 일</li>
+    }
 
     function addTodo(event) {
       event.preventDefault();
+      const newTodo = todoInput.value;
       //버튼에 클릭 이벤트가 발생하면
-      let todo = document.querySelector("input").value;
-      let list = document.createElement("li"); // html 'li' 태그 만들기
-      if (!todo)
+      if (!newTodo)
         // 할 일 입력창에 내용이 입력되지 않으면 alert 발생
         alert("내용을 입력해 주세요!");
       else {
-        todoList.appendChild(list); // <li>입력된 할 일</li>
-        list.innerHTML = `<span>${todo}</span>
-        <button>삭제</button>`; // 할 일 리스트창에 자식으로 붙이기
-        todo = ""; // 할 일 입력창 초기화
+        paintTodo(newTodo);
+        todoInput.value = ""; // 할 일 입력창 초기화 !! newTodo와는 별개임
       }
     }
-    submit.addEventListener("submit", addTodo);
+    todoForm.addEventListener("submit", addTodo);
 
     const btn = document.querySelector("button");
-
-    function deleteTodo(event) {
-      console.log(event);
-    }
-
-    btn.addEventListener("click", deleteTodo);
   </script>
 </html>
