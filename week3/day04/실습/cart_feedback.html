@@ -23,8 +23,9 @@
     <ul id="cartItemList"></ul>
   </body>
   <script>
+    // NOTE: 로컬스토리지에서 받아온 item 값을 이용하여, cart를 초기화 한다.
     let item = JSON.parse(localStorage.getItem("cart"));
-    let cart = new Array();
+    let cart = item || [];
 
     const cartItemList = document.getElementById("cartItemList");
     const btns = document.getElementsByTagName("button");
@@ -37,14 +38,30 @@
       cartItem.textContent = `${value}`;
       cartItemList.appendChild(cartItem);
     }
+
     btn.forEach((el) => el.addEventListener("click", () => cartIn(el.value)));
 
-    if (item) {
-      item.map((el) => {
-        const cartItem = document.createElement("li");
-        cartItem.textContent = el;
-        cartItemList.appendChild(cartItem);
-      });
-    }
+    // NOTE: cart를 통해서 li를 그린다
+    cart.map((el) => {
+      const cartItem = document.createElement("li");
+      cartItem.textContent = el;
+      cartItemList.appendChild(cartItem);
+    });
   </script>
 </html>
+
+<!-- localStorage에서 값을 가져올 때, 로컬스토리지는 사용자가 값을 수정할 수 있으므로 확인 단계가 있는 것이 좋다. -->
+<!-- 유틸리티와 같은 폴더에 이와 같이 저장해서 한 번 확인하여 값을 가져와 사용하는 것을 추천. -->
+<!-- const getItem = (key, defaultValue) => {
+  try {
+    const storedValue = localStorage.getItem(key);
+
+    if (storedValue) {
+      return JSON.parse(storedValue);
+    }
+
+    return defaultValue;
+  } catch (e) {
+    return defaultValue;
+  }
+}; -->
