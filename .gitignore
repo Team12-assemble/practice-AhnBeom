@@ -3,6 +3,7 @@
 /node_modules
 
 *apikey.js
+*/apikey.js
 
 .env*.local
 .env
