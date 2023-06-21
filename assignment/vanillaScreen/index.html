@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3c71edffc3.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Momentum</title>
   </head>
   <body>
@@ -25,11 +29,20 @@
           <button class="hidden">Login</button>
         </form>
         <h1 id="greeting" class="hidden"></h1>
+        <section id="todo-section">
+          <form id="todo-form">
+            <input type="text" required placeholder="할 일을 입력하세요." />
+            <button type="button">Add</button>
+          </form>
+          <ul id="todoList"></ul>
+        </section>
       </section>
     </section>
     <script type="module" src="./apikey.js"></script>
     <script type="module" src="./weather.js"></script>
+
     <script src="./greeting.js"></script>
+    <script src="./todoList.js"></script>
     <script src="./clock.js"></script>
     <script src="./background.js"></script>
   </body>
