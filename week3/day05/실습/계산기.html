@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>리액트로 계산기</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const root = document.getElementById("root");
+
+      function Calculator() {
+        const [input, setInput] = React.useState(0);
+
+        const handleChangeNum = (e) => {
+          setInput((prev) => prev + e.target.value);
+        };
+
+        const handleOperator = (operator) => {};
+
+        return (
+          <section>
+            <input onChange={handleChangeNum} value={input} readonly />
+            <section>
+              <section>
+                <button value={1} onClick={handleChangeNum}>
+                  1
+                </button>
+                <button value={2} onClick={handleChangeNum}>
+                  2
+                </button>
+                <button value={3} onClick={handleChangeNum}>
+                  3
+                </button>
+              </section>
+              <section>
+                <button value={4}>4</button>
+                <button value={5}>5</button>
+                <button value={6}>6</button>
+              </section>
+              <section>
+                <button value={7}>7</button>
+                <button value={8}>8</button>
+                <button value={9}>9</button>
+              </section>
+              <button value={0}>0</button>
+            </section>
+            <section>
+              <button onClick={handleOperator("+")}>+</button>
+              <button onClick={handleOperator("-")}>-</button>
+              <button>*</button>
+              <button>/</button>
+              <button>=</button>
+            </section>
+          </section>
+        );
+      }
+      ReactDOM.render(<Calculator />, root);
+    </script>
+  </body>
+</html>
