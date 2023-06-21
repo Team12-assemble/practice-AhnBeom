@@ -8,6 +8,10 @@ body {
   height: 100%;
 }
 
+button {
+  cursor: pointer;
+}
+
 input:focus {
   outline: none;
   text-align: center;
@@ -64,6 +68,8 @@ input:focus {
 #login-form input::placeholder,
 #todo-form input::placeholder {
   color: white;
+  background-color: rgb(232, 232, 232, 0.5);
+  font-weight: 600;
   text-align: center;
 }
 
@@ -76,6 +82,7 @@ input:focus {
 }
 
 #todo-section {
+  margin-top: 0.6rem;
   display: flex;
   flex-direction: column;
 }
@@ -87,15 +94,15 @@ input:focus {
 }
 
 #todo-form button {
-  background-color: rgb(212, 212, 212);
+  background-color: transparent;
   color: white;
-  border: none;
+  border: 1px solid white;
   border-radius: 4px;
   padding: 0.3rem 0.5rem;
 }
 
 #todoList {
-  margin-top: 1rem;
+  margin-top: 0.3rem;
 }
 
 #todoList li {
@@ -103,7 +110,7 @@ input:focus {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 0.3rem 0.5rem 0.3rem;
+  padding: 0.5rem 0.3rem;
   border-bottom: 1px solid white;
 }
 
