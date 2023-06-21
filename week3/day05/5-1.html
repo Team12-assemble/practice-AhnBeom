@@ -8,11 +8,34 @@
   </head>
   <body>
     <h1 id="weather"></h1>
+    <script src="../../apikey.js"></script>
     <script>
+      // API call
+      const API_KEY = config.apikey;
+
       const weather = document.getElementById("weather");
 
+      function getWeather(lat, lon) {
+        fetch(
+          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`
+        )
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (json) {
+            console.log(json);
+            const temp = json.main.temp;
+            const humidity = json.main.humidity;
+            weather.innerText = `${temp} @ ${humidity}`;
+          });
+        // console.log(lat, lon);
+      }
+
       function handleGeoSuccess(pos) {
-        console.log(pos);
+        // console.log(pos);
+        const latitude = pos.coords.latitude;
+        const longitude = pos.coords.longitude;
+        getWeather(latitude, longitude);
       }
 
       function handleGeoError() {

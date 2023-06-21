@@ -1,1 +1,11 @@
 *.DS_Store
+
+/node_modules
+
+*apikey.js
+
+.env*.local
+.env
+.env.local
+.env.production
+.env.development
