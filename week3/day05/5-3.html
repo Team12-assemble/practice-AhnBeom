@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5-3.카운트업다운</title>
+  </head>
+  <body>
+    <section>
+      <button id="down">-</button>
+      <span id="number">0</span>
+      <button id="up">+</button>
+    </section>
+    <script>
+      const down = document.getElementById("down");
+      const up = document.getElementById("up");
+      const number = document.getElementById("number");
+
+      let count = 0;
+
+      function countUp() {
+        number.innerText = count++;
+      }
+
+      function countDown() {
+        number.innerText = count--;
+      }
+
+      down.addEventListener("click", countDown);
+      up.addEventListener("click", countUp);
+    </script>
+  </body>
+</html>
