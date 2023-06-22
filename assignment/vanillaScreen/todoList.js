@@ -3,8 +3,6 @@ const todoList = document.querySelector("#todoList");
 const todoInput = document.querySelector("#todo-form input");
 const btn = document.querySelector("#todo-form button");
 
-console.log(todoInput.value);
-
 function deleteTodo(event) {
   const li = event.target.parentNode.parentNode;
   li.remove();
@@ -29,7 +27,6 @@ function addTodo(event) {
     // 할 일 입력창에 내용이 입력되지 않으면 alert 발생
     alert("내용을 입력해 주세요!");
   else {
-    console.log(newTodo);
     paintTodo(newTodo);
     todoInput.value = ""; // 할 일 입력창 초기화 !! newTodo와는 별개임
   }
