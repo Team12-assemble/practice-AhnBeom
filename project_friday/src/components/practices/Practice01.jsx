@@ -8,7 +8,7 @@ function PasswordInput({ setPassword, loginInfo }) {
     });
   };
 
-  return <input required onChange={HandlePassword} />;
+  return <input type="password" required onChange={HandlePassword} />;
 }
 
 function AdminInput({ setAdmin, loginInfo }) {
@@ -45,7 +45,9 @@ export default function LoginForm() {
 
   return (
     <LoginSubmit admin={login.admin} password={login.password}>
+      <label>사용자명:</label>
       <AdminInput loginInfo={login} setAdmin={setLogin} />
+      <label>비밀번호:</label>
       <PasswordInput loginInfo={login} setPassword={setLogin} />
       <button type="submit">로그인</button>
     </LoginSubmit>
