@@ -10,9 +10,9 @@ function Timer() {
     return () => {
       clearInterval(timer);
     };
-  }, []);
+  }, [count]);
 
-  return <>{count}</>;
+  return <h3>타이머:{count}</h3>;
 }
 
 export default function TimerApp() {
