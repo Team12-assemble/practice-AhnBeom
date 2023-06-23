@@ -1,9 +1,9 @@
-import TodoList from "components/practices/Practice02";
+import ImageSlider from "components/practices/Practice04";
 
 function App() {
   return (
     <>
-      <TodoList />
+      <ImageSlider />
     </>
   );
 }
