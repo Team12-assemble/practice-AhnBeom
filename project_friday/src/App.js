@@ -1,9 +1,9 @@
-import LoginForm from "components/practices/Practice01";
+import TodoList from "components/practices/Practice02";
 
 function App() {
   return (
     <>
-      <LoginForm />
+      <TodoList />
     </>
   );
 }
