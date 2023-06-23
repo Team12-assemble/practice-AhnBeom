@@ -4,13 +4,13 @@ const HandleTodo = ({ todos, todos2 }) => {
   return (
     <>
       <ul>
-        {todos.map((list) => {
-          return <li>{list.text}</li>;
+        {todos.map((todo) => {
+          return <li>{todo.text}</li>;
         })}
       </ul>
       <ul>
-        {todos2.map((list) => {
-          return <li>{list.text}</li>;
+        {todos2.map((todo) => {
+          return <li>{todo.text}</li>;
         })}
       </ul>
     </>
