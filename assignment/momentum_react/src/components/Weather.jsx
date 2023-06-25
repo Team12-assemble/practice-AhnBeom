@@ -20,9 +20,10 @@ export default function Weather() {
           return response.json();
         })
         .then(function (json) {
-          const temp = json.main.temp;
+          console.log(json);
+          // const temp = json.main.temp;
           const location = json.name;
-          setTemp((temp - 273.15).toFixed(1));
+          // setTemp((temp - 273.15).toFixed(1));
           setLocation(location);
         });
     }
