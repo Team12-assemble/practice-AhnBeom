@@ -3,8 +3,8 @@ import { useState } from "react";
 function LoginForm({ setUsername, username }) {
   const onLoginSubmit = (event) => {
     event.preventDefault();
-    setUsername(event.target[0].value);
     localStorage.setItem("username", event.target[0].value);
+    setUsername(localStorage.getItem("username"));
   };
 
   return (
@@ -30,7 +30,9 @@ function Hello({ username }) {
 }
 
 export default function Greeting() {
-  const [username, setUsername] = useState("");
+  const [_, setUsername] = useState("");
+
+  const username = localStorage.getItem("username");
 
   return (
     <>
