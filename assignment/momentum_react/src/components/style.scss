@@ -16,7 +16,7 @@
   color: white;
 }
 
-#weather {
+.weather {
   width: 100%;
   position: absolute;
   top: calc(2%);
@@ -26,7 +26,7 @@
   text-align: right;
 }
 
-#temp {
+.temp {
   font-weight: 600;
   font-size: 1.5rem;
 }
@@ -37,8 +37,8 @@
   align-items: center;
 }
 
-#login-form input,
-#todo-form input {
+.login-form input,
+.todo-form input {
   padding: 0.5rem 1rem;
   background-color: transparent;
   color: white;
@@ -46,8 +46,8 @@
   border-bottom: 1px solid white;
 }
 
-#login-form input::placeholder,
-#todo-form input::placeholder {
+.login-form input::placeholder,
+.todo-form input::placeholder {
   color: white;
   background-color: rgb(232, 232, 232, 0.5);
   font-weight: 600;
@@ -58,23 +58,23 @@
   font-size: 7rem;
 }
 
-#greeting {
+.greeting {
   font-size: 2rem;
 }
 
-#todo-section {
+.todo-section {
   margin-top: 0.6rem;
   display: flex;
   flex-direction: column;
 }
 
-#todo-form {
+.todo-form {
   display: flex;
   flex-direction: row;
   gap: 1.2rem;
 }
 
-#todo-form button {
+.todo-form button {
   background-color: transparent;
   color: white;
   border: 1px solid white;
@@ -82,11 +82,11 @@
   padding: 0.3rem 0.5rem;
 }
 
-#todoList {
+.todoList {
   margin-top: 0.3rem;
 }
 
-#todoList li {
+.todoList li {
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -95,7 +95,7 @@
   border-bottom: 1px solid white;
 }
 
-#todoList button {
+.todoList button {
   border: none;
   background-color: transparent;
   color: white;
