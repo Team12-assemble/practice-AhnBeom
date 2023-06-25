@@ -1,4 +1,4 @@
-import styles from "./style.module.css";
+import "./style.scss";
 const images = [
   "image01.webp",
   "image02.webp",
@@ -14,7 +14,7 @@ export default function Background({ children }) {
 
   return (
     <main
-      className={styles.bg}
+      className="bg"
       style={{ backgroundImage: `url(/images/${chosenImage})` }}
     >
       {children}

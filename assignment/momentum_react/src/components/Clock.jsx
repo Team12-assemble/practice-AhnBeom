@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import style from "./style.module.css";
+import "./style.scss";
 
 export default function Clock() {
   const [time, setTime] = useState(new Date());
@@ -14,7 +14,7 @@ export default function Clock() {
   const sec = String(time.getSeconds()).padStart(2, "0");
 
   return (
-    <h2 className={style.clock}>
+    <h2 className="clock">
       {hours}:{min}:{sec}
     </h2>
   );
