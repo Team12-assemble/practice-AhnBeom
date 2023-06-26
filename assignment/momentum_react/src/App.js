@@ -3,12 +3,12 @@ import Background from "./components/Background";
 import Clock from "./components/Clock";
 import Greeting from "./components/Greeting";
 import TodoList from "./components/TodoList";
-// import Weather from "./components/Weather";
+import Weather from "./components/Weather";
 
 function App() {
   return (
     <Background>
-      {/* <Weather /> */}
+      <Weather />
       <Clock />
       <Greeting />
       <TodoList />
