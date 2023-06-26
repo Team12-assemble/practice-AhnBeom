@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const SearchResults = () => {
   const location = useLocation();
@@ -12,6 +12,7 @@ const SearchResults = () => {
     <div>
       <h1>검색결과</h1>
       <h3>검색어: {query}</h3>
+      <Link to={".."}>이전</Link>
     </div>
   );
 };
