@@ -3,9 +3,8 @@ import { useLocation } from "react-router-dom";
 
 const SearchResults = () => {
   const location = useLocation();
-  //   console.log(location);
   const queryParams = new URLSearchParams(location.search);
-  const query = queryParams.get("query"); // 이 query는 어디서 나오는 query??
+  const query = queryParams.get("query"); // 이 query는 어디서 나오는 query?? .About.jsx의 onSubmit navigate에 있는 `/search?query=${search}`의 query
   useEffect(() => {
     console.log(query);
   }, [query]);
