@@ -1,9 +1,9 @@
-import ImageSlider from "components/practices/Practice04";
+import Form from "components/08";
 
 function App() {
   return (
     <>
-      <ImageSlider />
+      <Form />
     </>
   );
 }
