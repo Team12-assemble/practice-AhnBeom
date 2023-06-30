@@ -1,9 +1,9 @@
-import CountReducer from "components/12";
+import ToggleTheme from "components/13";
 
 function App() {
   return (
     <>
-      <CountReducer />
+      <ToggleTheme />
     </>
   );
 }
