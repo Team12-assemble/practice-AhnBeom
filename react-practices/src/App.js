@@ -1,9 +1,9 @@
-import CharacterCounter from "components/10";
+import HideTimer from "components/11";
 
 function App() {
   return (
     <>
-      <CharacterCounter />
+      <HideTimer />
     </>
   );
 }
