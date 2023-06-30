@@ -1,11 +1,9 @@
-import Counter from "components/09";
-import HideTimer from "components/11";
+import CountReducer from "components/12";
 
 function App() {
   return (
     <>
-      <Counter />
-      <HideTimer />
+      <CountReducer />
     </>
   );
 }
