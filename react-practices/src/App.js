@@ -1,9 +1,9 @@
-import ToggleTheme from "components/13";
+import LiveChat from "components/practices/LiveChat";
 
 function App() {
   return (
     <>
-      <ToggleTheme />
+      <LiveChat />
     </>
   );
 }
