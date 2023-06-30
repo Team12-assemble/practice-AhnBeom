@@ -1,9 +1,9 @@
-import Form from "components/08";
+import CharacterCounter from "components/10";
 
 function App() {
   return (
     <>
-      <Form />
+      <CharacterCounter />
     </>
   );
 }
