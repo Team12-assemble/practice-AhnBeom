@@ -20,8 +20,9 @@ const todoSlice = createSlice({
     deleteTodo: (state, action) => {
       console.log(action.payload);
       const nextState = state.filter((todo) => {
-        console.log(todo.id, action.payload);
-        console.log(todo.id !== action.payload);
+        // todo.id는 Date.now()로 생성되어 number 타입이지만, action.payload는 e.target.id로 들어가면서 string type이 되었다.
+        // console.log(todo.id, action.payload);
+        // console.log(todo.id !== action.payload);
         return todo.id !== Number(action.payload);
       });
       console.log(nextState);
