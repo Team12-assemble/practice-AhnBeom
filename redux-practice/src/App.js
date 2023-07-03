@@ -1,5 +1,13 @@
+import Counter from "./components/Counter";
+import TodoList from "./components/TodoList";
+
 function App() {
-  return <div>앱</div>;
+  return (
+    <div>
+      <Counter />
+      <TodoList />
+    </div>
+  );
 }
 
 export default App;
