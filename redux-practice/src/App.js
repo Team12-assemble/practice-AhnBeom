@@ -1,11 +1,9 @@
-import Counter from "./components/Counter";
-import TodoList from "./components/TodoList";
+import AuthApp from "./components/AuthApp";
 
 function App() {
   return (
     <div>
-      <Counter />
-      <TodoList />
+      <AuthApp />
     </div>
   );
 }
