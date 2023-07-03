@@ -25,7 +25,7 @@ const todoSlice = createSlice({
         // console.log(todo.id !== action.payload);
         return todo.id !== Number(action.payload);
       });
-      console.log(nextState);
+      // console.log(nextState);
       return nextState;
     },
   },
