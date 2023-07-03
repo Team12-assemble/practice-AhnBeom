@@ -26,7 +26,7 @@ export default function ReduxTodo() {
     }
   };
 
-  // console.log(todoList);
+  console.log(todoList);
 
   return (
     <div>

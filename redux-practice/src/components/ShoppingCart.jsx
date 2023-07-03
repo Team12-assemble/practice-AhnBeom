@@ -14,7 +14,6 @@ export default function ShoppingCart() {
     dispatch(deleteCart(e.target.id));
   };
 
-  console.log(cart);
   return (
     <div>
       <h1>쇼핑 카트</h1>
@@ -25,16 +24,14 @@ export default function ShoppingCart() {
         상품 2 추가
       </button>
       <ul>
-        {cart.map((item, i) => {
-          return (
-            <li key={i}>
-              {item.name} - {item.price}원
-              <button id={item.id} onClick={handleCartDelete}>
-                제거
-              </button>
-            </li>
-          );
-        })}
+        {cart.map((item, i) => (
+          <li key={i}>
+            {item.name} - {item.price}원
+            <button id={item.id} onClick={handleCartDelete}>
+              제거
+            </button>
+          </li>
+        ))}
       </ul>
     </div>
   );

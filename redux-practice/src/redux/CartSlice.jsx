@@ -20,10 +20,9 @@ const CartSlice = createSlice({
       ];
     },
     deleteCart: (state, action) => {
-      const nextState = state.filter((todo) => {
-        return todo.id !== Number(action.payload);
+      state.cart = state.cart.filter((item) => {
+        return item.id !== Number(action.payload);
       });
-      return nextState;
     },
   },
 });
