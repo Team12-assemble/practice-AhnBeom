@@ -1,9 +1,9 @@
-import ReduxTodo from "./components/ReduxTodo";
+import ShoppingCart from "./components/ShoppingCart";
 
 function App() {
   return (
     <div>
-      <ReduxTodo />
+      <ShoppingCart />
     </div>
   );
 }
