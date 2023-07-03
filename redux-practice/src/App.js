@@ -1,9 +1,9 @@
-import AuthApp from "./components/AuthApp";
+import ReduxTodo from "./components/ReduxTodo";
 
 function App() {
   return (
     <div>
-      <AuthApp />
+      <ReduxTodo />
     </div>
   );
 }
